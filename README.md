@@ -61,31 +61,37 @@ The project demonstrates an end-to-end DevOps workflow for a small API, covering
 
 ```mermaid
 flowchart TD
-    A[Developer] --> B[GitHub Repository]
-    B --> C[GitHub Actions]
+    DEV[Developer] -->|git push| GH[GitHub Repository]
+    GH --> CI
 
-    C --> D[Install Dependencies]
-    D --> E[Ruff Lint]
-    E --> F[Pytest]
-    F --> G[Docker Build]
-    G --> H[Trivy Image Scan]
-    H --> I[Push Versioned Image to GHCR]
+    subgraph CI[GitHub Actions CI]
+        direction TB
+        A[Install dependencies] --> B[Ruff lint]
+        B --> C[Pytest]
+        C --> D[Docker build]
+        D --> E[Trivy image scan]
+        E --> F[Push versioned image]
+    end
 
-    I -. Image publishing .-> J[Local Ubuntu Environment]
+    C -. any failure stops pipeline .-> X[Blocked: no image published]
+    E -. failure stops pipeline .-> X
+    F --> REG[(GHCR registry)]
 
-    J --> K[Docker Compose]
-    K --> L[FastAPI Container]
-    K --> M[PostgreSQL Container]
+    subgraph HOST[Local Ubuntu host - Docker Compose]
+        direction TB
+        REL[release.sh / rollback.sh] -->|selects version tag| API
+        ENV[.env config] --> API
+        ENV --> DB
+        API[FastAPI container<br/>non-root, read-only] <-->|internal network| DB[(PostgreSQL container)]
+        DB --- VOL[(postgres_data volume)]
+    end
 
-    L <--> M
+    DEV -. builds image locally from the same repo .-> REL
 
-    L --> N[Health Endpoint]
-    L --> O[Readiness Endpoint]
-    L --> P[Prometheus Metrics]
-    L --> Q[Structured JSON Logs]
-
-    R[Release Script] --> K
-    S[Rollback Script] --> K
+    API --> H[/health liveness/]
+    API --> R[/ready readiness: DB check/]
+    API --> M[/metrics Prometheus/]
+    API --> L[JSON logs: docker compose logs]
 ```
 
 ### Architecture explanation
@@ -588,7 +594,7 @@ All evidence was captured from the Ubuntu assessment host on 30 Oct 2026. Raw ou
 
 Command: `pytest -v 2>&1 | tee evidence/test-results.txt`
 
-![Pytest results](evidence/screenshots/01-pytest-results.png)
+<img width="1512" height="799" alt="image" src="https://github.com/user-attachments/assets/b926252e-bbbc-4ad1-ae4d-f0f8e4d9662c" />
 
 | Test | Result |
 |---|---|
@@ -605,7 +611,7 @@ Result: **6 passed, 1 warning in 0.25s** (pytest 8.3.3; the warning is a non-blo
 
 Command: `docker compose ps | tee evidence/docker-deployment.txt`
 
-![Docker Compose status](evidence/screenshots/02-docker-compose-ps.png)
+<img width="1512" height="805" alt="image" src="https://github.com/user-attachments/assets/ad5523ed-b414-4ebe-bb58-00b6be9a2c50" />
 
 | Service | Image | Status | Ports |
 |---|---|---|---|
@@ -616,7 +622,7 @@ Command: `docker compose ps | tee evidence/docker-deployment.txt`
 
 Commands: `curl -fsS http://127.0.0.1:8000/health | tee evidence/health-check.txt` and the same for `/ready` (`evidence/readiness-check.txt`).
 
-![Health and readiness](evidence/screenshots/03-health-readiness.png)
+<img width="1917" height="1020" alt="Screenshot 2026-10-30 204216" src="https://github.com/user-attachments/assets/dff7cce2-0d37-4883-8df6-2be54ce42ccd" />
 
 ```json
 {"status":"ok","version":"v1.0.0"}
@@ -627,7 +633,7 @@ Commands: `curl -fsS http://127.0.0.1:8000/health | tee evidence/health-check.tx
 
 Commands: `curl -fsS http://127.0.0.1:8000/health | tee evidence/release-version.txt` and `cat .release-state | tee evidence/rollback-state.txt`
 
-![Release and rollback state](evidence/screenshots/04-release-rollback-state.png)
+<img width="1917" height="1020" alt="Screenshot 2026-10-30 204349" src="https://github.com/user-attachments/assets/d26b9c77-d5ba-4b7d-b180-24b0538cb075" />
 
 ```text
 {"status":"ok","version":"v1.0.0"}
@@ -640,7 +646,7 @@ The running application reports `v1.0.0` after the rollback from `v1.0.1`.
 
 Workflow job **Lint, Test, Build and Scan**: succeeded in 1m 11s.
 
-![GitHub Actions success](evidence/screenshots/05-github-actions-success.png)
+<img width="1917" height="962" alt="Screenshot 2026-10-30 212933" src="https://github.com/user-attachments/assets/4f505df1-6383-478d-b245-ee5a1d77e96a" />
 
 | Step | Result | Duration |
 |---|---|---|
@@ -660,7 +666,7 @@ Run URL: `https://github.com/Mahendra0456/apex-ops-api/actions/runs/41069443738`
 
 Command: `docker inspect apex-ops-api-api-1 --format '...' | tee evidence/container-security.txt`
 
-![Container security](evidence/screenshots/06-container-security.png)
+<img width="1917" height="1015" alt="Screenshot 2026-10-30 213250" src="https://github.com/user-attachments/assets/c2bf3033-d523-41f4-877c-f116cb561243" />
 
 ```text
 User=apex ReadonlyRootfs=true CapDrop=["ALL"] SecurityOpt=["no-new-privileges:true"]
@@ -672,7 +678,7 @@ Metrics and logs were also captured: `evidence/prometheus-metrics.txt` and `evid
 
 Sequence: stop `db` → check `/ready` → start `db` → confirm recovery.
 
-![Failure investigation](evidence/screenshots/07-failure-investigation.png)
+<img width="1917" height="1020" alt="Screenshot 2026-10-30 213741" src="https://github.com/user-attachments/assets/474b4e54-6c9f-49be-8b22-a5ed1630dfb5" />
 
 | Step | Command | Observed result |
 |---|---|---|
