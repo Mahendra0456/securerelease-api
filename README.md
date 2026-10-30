@@ -1,4 +1,4 @@
-# SecureRelease API — DevOps Project
+# SecureRelease API
 
 <p align="center">
 
