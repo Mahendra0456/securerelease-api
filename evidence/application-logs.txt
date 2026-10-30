@@ -1,0 +1,100 @@
+api-1  | {"ts": "2026-10-30 15:53:34,428", "level": "INFO", "msg": "GET /health 200 0ms", "version": "v1.0.0"}
+api-1  | INFO:     127.0.0.1:59422 - "GET /health HTTP/1.1" 200 OK
+api-1  | {"ts": "2026-10-30 15:53:44,465", "level": "INFO", "msg": "GET /health 200 0ms", "version": "v1.0.0"}
+api-1  | INFO:     127.0.0.1:58768 - "GET /health HTTP/1.1" 200 OK
+api-1  | {"ts": "2026-10-30 15:53:54,501", "level": "INFO", "msg": "GET /health 200 0ms", "version": "v1.0.0"}
+api-1  | INFO:     127.0.0.1:48506 - "GET /health HTTP/1.1" 200 OK
+api-1  | {"ts": "2026-10-30 15:54:04,537", "level": "INFO", "msg": "GET /health 200 0ms", "version": "v1.0.0"}
+api-1  | INFO:     127.0.0.1:46858 - "GET /health HTTP/1.1" 200 OK
+api-1  | {"ts": "2026-10-30 15:54:14,573", "level": "INFO", "msg": "GET /health 200 0ms", "version": "v1.0.0"}
+api-1  | INFO:     127.0.0.1:47174 - "GET /health HTTP/1.1" 200 OK
+api-1  | {"ts": "2026-10-30 15:54:24,609", "level": "INFO", "msg": "GET /health 200 0ms", "version": "v1.0.0"}
+api-1  | INFO:     127.0.0.1:49144 - "GET /health HTTP/1.1" 200 OK
+api-1  | {"ts": "2026-10-30 15:54:34,645", "level": "INFO", "msg": "GET /health 200 0ms", "version": "v1.0.0"}
+api-1  | INFO:     127.0.0.1:55488 - "GET /health HTTP/1.1" 200 OK
+api-1  | {"ts": "2026-10-30 15:54:44,681", "level": "INFO", "msg": "GET /health 200 0ms", "version": "v1.0.0"}
+api-1  | INFO:     127.0.0.1:52128 - "GET /health HTTP/1.1" 200 OK
+api-1  | {"ts": "2026-10-30 15:54:54,716", "level": "INFO", "msg": "GET /health 200 0ms", "version": "v1.0.0"}
+api-1  | INFO:     127.0.0.1:38876 - "GET /health HTTP/1.1" 200 OK
+api-1  | INFO:     127.0.0.1:37224 - "GET /health HTTP/1.1" 200 OK
+api-1  | {"ts": "2026-10-30 15:55:04,754", "level": "INFO", "msg": "GET /health 200 0ms", "version": "v1.0.0"}
+api-1  | {"ts": "2026-10-30 15:55:14,790", "level": "INFO", "msg": "GET /health 200 0ms", "version": "v1.0.0"}
+api-1  | INFO:     127.0.0.1:40196 - "GET /health HTTP/1.1" 200 OK
+api-1  | {"ts": "2026-10-30 15:55:24,826", "level": "INFO", "msg": "GET /health 200 0ms", "version": "v1.0.0"}
+api-1  | INFO:     127.0.0.1:39154 - "GET /health HTTP/1.1" 200 OK
+api-1  | {"ts": "2026-10-30 15:55:34,864", "level": "INFO", "msg": "GET /health 200 0ms", "version": "v1.0.0"}
+api-1  | INFO:     127.0.0.1:33002 - "GET /health HTTP/1.1" 200 OK
+api-1  | {"ts": "2026-10-30 15:55:44,898", "level": "INFO", "msg": "GET /health 200 0ms", "version": "v1.0.0"}
+api-1  | INFO:     127.0.0.1:47020 - "GET /health HTTP/1.1" 200 OK
+api-1  | INFO:     127.0.0.1:54866 - "GET /health HTTP/1.1" 200 OK
+api-1  | {"ts": "2026-10-30 15:55:54,933", "level": "INFO", "msg": "GET /health 200 0ms", "version": "v1.0.0"}
+api-1  | {"ts": "2026-10-30 15:56:04,971", "level": "INFO", "msg": "GET /health 200 0ms", "version": "v1.0.0"}
+api-1  | INFO:     127.0.0.1:57022 - "GET /health HTTP/1.1" 200 OK
+api-1  | {"ts": "2026-10-30 15:56:15,012", "level": "INFO", "msg": "GET /health 200 0ms", "version": "v1.0.0"}
+api-1  | INFO:     127.0.0.1:39640 - "GET /health HTTP/1.1" 200 OK
+api-1  | {"ts": "2026-10-30 15:56:25,049", "level": "INFO", "msg": "GET /health 200 0ms", "version": "v1.0.0"}
+api-1  | INFO:     127.0.0.1:34700 - "GET /health HTTP/1.1" 200 OK
+api-1  | {"ts": "2026-10-30 15:56:35,084", "level": "INFO", "msg": "GET /health 200 0ms", "version": "v1.0.0"}
+api-1  | INFO:     127.0.0.1:59142 - "GET /health HTTP/1.1" 200 OK
+api-1  | {"ts": "2026-10-30 15:56:45,122", "level": "INFO", "msg": "GET /health 200 0ms", "version": "v1.0.0"}
+api-1  | INFO:     127.0.0.1:52934 - "GET /health HTTP/1.1" 200 OK
+api-1  | {"ts": "2026-10-30 15:56:55,159", "level": "INFO", "msg": "GET /health 200 0ms", "version": "v1.0.0"}
+api-1  | INFO:     127.0.0.1:47312 - "GET /health HTTP/1.1" 200 OK
+api-1  | {"ts": "2026-10-30 15:57:05,195", "level": "INFO", "msg": "GET /health 200 0ms", "version": "v1.0.0"}
+api-1  | INFO:     127.0.0.1:38380 - "GET /health HTTP/1.1" 200 OK
+api-1  | {"ts": "2026-10-30 15:57:15,232", "level": "INFO", "msg": "GET /health 200 0ms", "version": "v1.0.0"}
+api-1  | INFO:     127.0.0.1:38406 - "GET /health HTTP/1.1" 200 OK
+api-1  | {"ts": "2026-10-30 15:57:25,269", "level": "INFO", "msg": "GET /health 200 0ms", "version": "v1.0.0"}
+api-1  | INFO:     127.0.0.1:36788 - "GET /health HTTP/1.1" 200 OK
+api-1  | {"ts": "2026-10-30 15:57:35,305", "level": "INFO", "msg": "GET /health 200 0ms", "version": "v1.0.0"}
+api-1  | INFO:     127.0.0.1:44664 - "GET /health HTTP/1.1" 200 OK
+api-1  | {"ts": "2026-10-30 15:57:45,341", "level": "INFO", "msg": "GET /health 200 0ms", "version": "v1.0.0"}
+api-1  | INFO:     127.0.0.1:36578 - "GET /health HTTP/1.1" 200 OK
+api-1  | {"ts": "2026-10-30 15:57:55,376", "level": "INFO", "msg": "GET /health 200 0ms", "version": "v1.0.0"}
+api-1  | INFO:     127.0.0.1:58538 - "GET /health HTTP/1.1" 200 OK
+api-1  | {"ts": "2026-10-30 15:58:05,413", "level": "INFO", "msg": "GET /health 200 0ms", "version": "v1.0.0"}
+api-1  | INFO:     127.0.0.1:54750 - "GET /health HTTP/1.1" 200 OK
+api-1  | {"ts": "2026-10-30 15:58:15,451", "level": "INFO", "msg": "GET /health 200 0ms", "version": "v1.0.0"}
+api-1  | INFO:     127.0.0.1:49738 - "GET /health HTTP/1.1" 200 OK
+api-1  | INFO:     127.0.0.1:36876 - "GET /health HTTP/1.1" 200 OK
+api-1  | {"ts": "2026-10-30 15:58:25,488", "level": "INFO", "msg": "GET /health 200 0ms", "version": "v1.0.0"}
+api-1  | {"ts": "2026-10-30 15:58:35,525", "level": "INFO", "msg": "GET /health 200 0ms", "version": "v1.0.0"}
+api-1  | INFO:     127.0.0.1:39162 - "GET /health HTTP/1.1" 200 OK
+api-1  | {"ts": "2026-10-30 15:58:45,562", "level": "INFO", "msg": "GET /health 200 0ms", "version": "v1.0.0"}
+api-1  | INFO:     127.0.0.1:60128 - "GET /health HTTP/1.1" 200 OK
+api-1  | INFO:     127.0.0.1:60516 - "GET /health HTTP/1.1" 200 OK
+api-1  | {"ts": "2026-10-30 15:58:55,598", "level": "INFO", "msg": "GET /health 200 0ms", "version": "v1.0.0"}
+api-1  | {"ts": "2026-10-30 15:59:05,634", "level": "INFO", "msg": "GET /health 200 0ms", "version": "v1.0.0"}
+api-1  | INFO:     127.0.0.1:52538 - "GET /health HTTP/1.1" 200 OK
+api-1  | {"ts": "2026-10-30 15:59:15,671", "level": "INFO", "msg": "GET /health 200 0ms", "version": "v1.0.0"}
+api-1  | INFO:     127.0.0.1:43378 - "GET /health HTTP/1.1" 200 OK
+api-1  | {"ts": "2026-10-30 15:59:25,706", "level": "INFO", "msg": "GET /health 200 0ms", "version": "v1.0.0"}
+api-1  | INFO:     127.0.0.1:43896 - "GET /health HTTP/1.1" 200 OK
+api-1  | {"ts": "2026-10-30 15:59:35,743", "level": "INFO", "msg": "GET /health 200 0ms", "version": "v1.0.0"}
+api-1  | INFO:     127.0.0.1:60748 - "GET /health HTTP/1.1" 200 OK
+api-1  | {"ts": "2026-10-30 15:59:45,779", "level": "INFO", "msg": "GET /health 200 0ms", "version": "v1.0.0"}
+api-1  | INFO:     127.0.0.1:60580 - "GET /health HTTP/1.1" 200 OK
+api-1  | {"ts": "2026-10-30 15:59:55,815", "level": "INFO", "msg": "GET /health 200 0ms", "version": "v1.0.0"}
+api-1  | INFO:     127.0.0.1:48024 - "GET /health HTTP/1.1" 200 OK
+api-1  | {"ts": "2026-10-30 16:00:05,854", "level": "INFO", "msg": "GET /health 200 0ms", "version": "v1.0.0"}
+api-1  | INFO:     127.0.0.1:58876 - "GET /health HTTP/1.1" 200 OK
+api-1  | {"ts": "2026-10-30 16:00:15,890", "level": "INFO", "msg": "GET /health 200 0ms", "version": "v1.0.0"}
+api-1  | INFO:     127.0.0.1:60152 - "GET /health HTTP/1.1" 200 OK
+api-1  | {"ts": "2026-10-30 16:00:25,926", "level": "INFO", "msg": "GET /health 200 0ms", "version": "v1.0.0"}
+api-1  | INFO:     127.0.0.1:33644 - "GET /health HTTP/1.1" 200 OK
+api-1  | {"ts": "2026-10-30 16:00:35,963", "level": "INFO", "msg": "GET /health 200 0ms", "version": "v1.0.0"}
+api-1  | INFO:     127.0.0.1:43994 - "GET /health HTTP/1.1" 200 OK
+api-1  | {"ts": "2026-10-30 16:00:45,998", "level": "INFO", "msg": "GET /health 200 0ms", "version": "v1.0.0"}
+api-1  | INFO:     127.0.0.1:48128 - "GET /health HTTP/1.1" 200 OK
+api-1  | INFO:     172.19.0.1:60538 - "GET /metrics HTTP/1.1" 200 OK
+api-1  | {"ts": "2026-10-30 16:00:54,412", "level": "INFO", "msg": "GET /metrics 200 0ms", "version": "v1.0.0"}
+api-1  | {"ts": "2026-10-30 16:00:56,034", "level": "INFO", "msg": "GET /health 200 0ms", "version": "v1.0.0"}
+api-1  | INFO:     127.0.0.1:44146 - "GET /health HTTP/1.1" 200 OK
+api-1  | {"ts": "2026-10-30 16:01:06,072", "level": "INFO", "msg": "GET /health 200 0ms", "version": "v1.0.0"}
+api-1  | INFO:     127.0.0.1:38132 - "GET /health HTTP/1.1" 200 OK
+api-1  | {"ts": "2026-10-30 16:01:16,108", "level": "INFO", "msg": "GET /health 200 0ms", "version": "v1.0.0"}
+api-1  | INFO:     127.0.0.1:59220 - "GET /health HTTP/1.1" 200 OK
+api-1  | {"ts": "2026-10-30 16:01:26,146", "level": "INFO", "msg": "GET /health 200 0ms", "version": "v1.0.0"}
+api-1  | INFO:     127.0.0.1:42284 - "GET /health HTTP/1.1" 200 OK
+api-1  | INFO:     172.19.0.1:57834 - "GET /metrics HTTP/1.1" 200 OK
+api-1  | {"ts": "2026-10-30 16:01:26,763", "level": "INFO", "msg": "GET /metrics 200 0ms", "version": "v1.0.0"}

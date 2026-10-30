@@ -22,9 +22,16 @@ def test_metrics():
     assert "http_requests_total" in response.text
 
 
-def test_create_task_without_database():
+def test_create_task_database_unavailable(monkeypatch):
+    def fail_connection():
+        raise RuntimeError("simulated database outage")
+
+    monkeypatch.setattr("app.main.conn", fail_connection)
+
     response = client.post("/tasks", json={"name": "test task"})
-    assert response.status_code in (200, 500)
+
+    assert response.status_code == 500
+    assert response.json()["detail"] == "task creation failed"
 
 
 def test_invalid_task():
