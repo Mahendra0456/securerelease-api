@@ -1,4 +1,4 @@
-# Apex Operations API — DevOps Assessment
+# SecureRelease API — DevOps Project
 
 <p align="center">
 
