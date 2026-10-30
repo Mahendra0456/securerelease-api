@@ -44,7 +44,7 @@ jobs:
             -t ghcr.io/mahendra0456/apex-ops-api:${GITHUB_SHA} .
 
       - name: Trivy vulnerability scan
-        uses: aquasecurity/trivy-action@0.36.0
+        uses: aquasecurity/trivy-action@v0.36.0
         with:
           image-ref: ghcr.io/mahendra0456/apex-ops-api:${{ github.sha }}
           scan-type: image
